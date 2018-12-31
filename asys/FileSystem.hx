@@ -39,9 +39,9 @@ class FileSystem {
 				case null: Success({
 					gid: stat.gid,
 					uid: stat.uid,
-					atime: stat.atime,
-					mtime: stat.mtime,
-					ctime: stat.ctime,
+					atime: js.Date.toHaxeDate(stat.atime),
+					mtime: js.Date.toHaxeDate(stat.mtime),
+					ctime: js.Date.toHaxeDate(stat.ctime),
 					size: Std.int(stat.size),
 					dev : stat.dev,
 					ino: Std.int(stat.ino),
